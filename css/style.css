@@ -4,8 +4,9 @@
 
 :root{
     --light: #ffffff;
-    /*--light: yellow;*/
+    /*--light: #000000;*/
     --dark: #000000;
+    /*--dark: #aed6ef;*/
     --bright: rgba(23, 200, 227, 1);
     --trans: rgba(23, 200, 227, 0.5);
     --text-color:#afaaaa;
@@ -189,7 +190,7 @@ main > div{
 }
 
 #title{
-    background-color: black;
+    background-color: var(--dark);
     height: 30%;
     width: 80%;
     display: flex;
@@ -629,7 +630,10 @@ p{
 #contact-details svg{
     width: 50px;
     fill: var(--bright);
+}
 
+#contact-details svg:hover{
+    animation: un;
 }
 
 #detail-form{
@@ -649,6 +653,11 @@ p{
     padding: 10px;
     font-size: 20px;
     color: var(--dark);
+}
+
+#detail-form button:hover{
+    opacity: 0.8;
+    color: var(--light);
 }
 
 .text{
