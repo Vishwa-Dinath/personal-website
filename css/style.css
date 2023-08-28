@@ -8,6 +8,7 @@
     --dark: #000000;
     --bright: rgba(23, 200, 227, 1);
     --trans: rgba(23, 200, 227, 0.5);
+    --text-color:#afaaaa;
 }
 
 html{
@@ -343,7 +344,6 @@ main > div{
     height: 100%;
     width: 60%;
     /*color: var(--light);*/
-    color: #afaaaa;
     padding: 20px 50px;
 }
 
@@ -358,7 +358,7 @@ main > div{
 .topic::after{
     content: "";
     height: 2px;
-    width: 90%;
+    width: 700px;
     background-color: var(--bright);
     position: absolute;
     bottom: -25%;
@@ -370,10 +370,11 @@ main > div{
     /*font-weight: bold;*/
 }
 
-#details > p{
-    font-size: 45%;
+p{
+    font-size: 18px;
     line-height: 30px;
     margin-bottom: 15px;
+    color: var(--text-color);
 }
 
 #profile{
@@ -442,24 +443,217 @@ main > div{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+#project-section{
+    height: 90%;
+    width: 70%;
+    /*background-color: #c5c5a2;*/
 }
 
 #project-container{
-    height: 70%;
-    width: 70%;
-    /*background-color: aqua;*/
+    /*background-color: brown;*/
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 200px;
+    row-gap: 80px;
+    flex-wrap: wrap;
+}
+
+.project-icon{
+    height:300px;
+    width: 400px;
+    /*background-color: orange;*/
+}
+
+.project-image{
+    width: 480px;
+    height: 360px;
+    background-image: url("/img/l1.png");
+    background-size: cover;
+    background-position: center;
+    /*background-color: brown;*/
+    /*cursor: pointer;*/
+    position: relative;
+    /*overflow: hidden;*/
+}
+.project-image > img{
+    width: 76%;
+    height: 65%;
+    margin-left: 58px;
+    margin-top: 46px;
+}
+
+.image-overlay{
+    width: 76%;
+    height: 65%;
+    position: absolute;
+    left: 58px;
+    top: 46px;
+    /*background-color: yellow;*/
+    overflow: hidden;
+}
+
+.inner-overlay{
+    width: 100%;
+    height: 100%;
+    /*background-color: var(--bright);*/
+    background-image: linear-gradient(to right, #696868,black);
+    position: absolute;
+    left: -100%;
+    /*top: 0;*/
+    transition-property: left;
+    transition-duration: 1s;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.image-overlay:hover .inner-overlay{
+    left: 0;
+}
+
+
+.inner-overlay > p{
+    color: var(--bright);
+    font-size: 17px;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.highlight2{
+    color: var(--light);
+    font-weight: bold;
+}
+
+.sub-topic{
+    font-size: 25px;
+    color: var(--bright);
+    cursor: pointer;
+    /*background-color: white;*/
+}
+.project-icon a{
+    text-decoration: none;
+}
+
+.sub-topic:hover{
+    color: var(--light);
 }
 
 #work{
     background-color:  var(--dark);
 }
 
+#work-section{
+    height: 70%;
+    width: 70%;
+    margin-top: 100px;
+    /*background-color: white;*/
+}
+
 #skills{
     background-color:  var(--dark);
 }
 
+#skill-section{
+    height: 80%;
+    width: 70%;
+    padding: 20px;
+    /*background-color: dodgerblue;*/
+}
+
+#skill-container{
+    /*background-color: white;*/
+    width: 100%;
+    height: 90%;
+}
+
+#technical-skills{
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+    text-align: justify;
+    /*background-color: orange;*/
+}
+
+#personal-skills{
+    /*background-color: yellow;*/
+    padding: 10px;
+}
+
+.topic2{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.skill-icon{
+    font-size: 30px;
+    background-color: var(--bright);
+    color: var(--light);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 6px;
+    margin: 10px;
+    display: inline-block;
+    user-select: none;
+}
+
+.skill-icon:hover{
+    scale: 1.1;
+    background-color: white;
+    color: black;
+}
+
 #contact{
     background-color:  var(--dark);
+}
+
+#contact-section{
+    width: 70%;
+    height: 80%;
+    /*background-color: white;*/
+    padding: 20px;
+}
+
+#contact-details{
+    width: 90%;
+    /*height: 80%;*/
+    padding: 20px;
+    /*background-color: brown;*/
+}
+
+#contact-details svg{
+    width: 50px;
+    fill: var(--bright);
+
+}
+
+#detail-form{
+    width: 90%;
+    /*background-color: orange;*/
+    padding: 30px;
+}
+
+#detail-form h1{
+    color: var(--bright);
+    text-shadow: 0 0 10px var(--bright);
+}
+
+#detail-form button{
+    background-color: var(--bright);
+    width: fit-content;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--dark);
+}
+
+.text{
+    font-size: 20px;
+    border: 3px solid var(--bright);
+    box-shadow: 0 0 15px var(--bright);
 }
 
