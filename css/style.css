@@ -6,10 +6,13 @@
     --light: #ffffff;
     /*--light: #000000;*/
     --dark: #000000;
-    /*--dark: #aed6ef;*/
+    /*--dark: #ffffff;*/
     --bright: rgba(23, 200, 227, 1);
+    /*--bright: rgb(31, 39, 40);*/
     --trans: rgba(23, 200, 227, 0.5);
     --text-color:#afaaaa;
+    /*--text-color: #000000;*/
+    --light-text:rgba(23, 200, 227, 1);
 }
 
 html{
@@ -88,7 +91,7 @@ aside{
     border-top-right-radius: 25px;
     font-size: 13px;
     font-weight: bold;
-    color: black;
+    color: var(--dark);
     visibility: hidden;
     box-shadow: 0 0 10px var(--light);
     /*transition-property: right;*/
@@ -140,6 +143,10 @@ aside{
     justify-content: center;
     align-items: center;
     margin: 0 10px;
+}
+
+#icons svg{
+    fill: var(--dark);
 }
 
 #icons > a:hover{
@@ -251,15 +258,15 @@ main > div{
     /*background-color: red;*/
 }
 
-#theme-container{
-    width: 100%;
-    height: 100px;
-    /*background-color: brown;*/
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 30px;
-}
+/*#theme-container{*/
+/*    width: 100%;*/
+/*    height: 100px;*/
+/*    background-color: brown;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: flex-end;*/
+/*    padding: 30px;*/
+/*}*/
 
 #theme{
     width: 50px;
@@ -268,6 +275,9 @@ main > div{
     cursor: pointer;
     border-radius: 100%;
     box-shadow: 0 0 10px var(--light);
+    position: fixed;
+    right: 30px;
+    top: 20px;
 }
 
 #theme:hover{
@@ -277,6 +287,7 @@ main > div{
 #theme > svg{
     width: 80%;
     height: 80%;
+    fill: var(--dark);
 }
 
 #image{
@@ -301,8 +312,19 @@ main > div{
     transition: bottom 1s, left 1s;
 }
 
+#image svg{
+    height: 90%;
+    position: absolute;
+    bottom: -10%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+    scale: -1;
+    left: -120%;
+    fill: var(--bright);
+}
+
 #image:hover .shape{
-    bottom: 50px;
+    bottom: 0;
 }
 #image:hover .boy{
     left: 20%;
@@ -519,7 +541,7 @@ p{
 
 
 .inner-overlay > p{
-    color: var(--bright);
+    color: var(--light-text);
     font-size: 17px;
     line-height: 25px;
     text-align: justify;
@@ -553,6 +575,24 @@ p{
     width: 70%;
     margin-top: 100px;
     /*background-color: white;*/
+    padding: 20px;
+}
+
+#experience{
+    /*background-color: orange;*/
+    width: 100%;
+}
+
+#experience > h1{
+    color: var(--light);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#experience > h2{
+    color: var(--text-color);
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 #skills{
@@ -587,14 +627,15 @@ p{
 
 .topic2{
     font-size: 35px;
-    color: white;
+    color: var(--light);
     margin-bottom: 30px;
 }
 
 .skill-icon{
     font-size: 30px;
     background-color: var(--bright);
-    color: var(--light);
+    /*color: var(--light);*/
+    color: white;
     border-radius: 10px;
     width: fit-content;
     padding: 6px;
