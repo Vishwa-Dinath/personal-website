@@ -15,6 +15,10 @@
     --light-text:rgba(23, 200, 227, 1);
 }
 
+body{
+    /*scroll-snap-type: y mandatory;*/
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -176,11 +180,13 @@ main{
     height: 100vh;
     margin-left: 150px;
     font-size: 2.5rem;
+    scroll-snap-type: y mandatory;
 }
 
 main > div{
     height: 100%;
     width: 100%;
+    scroll-snap-align: center;
 }
 #home{
     background-color: var(--dark);
@@ -360,6 +366,11 @@ main > div{
     height: 70%;
     width: 70%;
     display: flex;
+    position: absolute;
+}
+
+.wrapper{
+
 }
 
 #details{
@@ -705,5 +716,21 @@ p{
     font-size: 20px;
     border: 3px solid var(--bright);
     box-shadow: 0 0 15px var(--bright);
+}
+
+.moving{
+    /*position: absolute;*/
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving {
+    from{
+        left: -800px;
+    }
+    to{
+        left: 0;
+    }
 }
 
