@@ -1,6 +1,4 @@
 **/.idea/
-**/node_modules/jquery
-**/node_modules/@popperjs
 **/*.iml
 **/out
 **/target
